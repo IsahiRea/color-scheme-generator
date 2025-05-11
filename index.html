@@ -1,9 +1,32 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>Color Scheme</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1>index.html</h1>
+        <main>
+            <nav>
+                <input type="color" class="color-picker"  id="color-picker" name="color" value="#ff0000" aria-label="Color picker">
+                <select name="color-mode" class="color-mode" id="color-mode" aria-label="Color mode">
+                    <option value="Monochrome">Monochrome</option>
+                    <option value="Monochrome-dark">Monochrome-dark</option>
+                    <option value="Monochrome-light">Monochrome-light</option>
+                    <option value="Analogic" selected>Analogic</option>
+                    <option value="Complement">Complement</option>
+                    <option value="Analogic-complement">Analogic-complement</option>
+                    <option value="Triad">Triad</option>
+                </select> 
+                <button id="color-btn">Get color scheme</button>
+            </nav>
+            <section id="color-container" class="color-container"></section>
+            <section id="color-scheme" class="color-scheme"></section>
+            <div id="alert"><span id="alert-message"></span></div>
+        </main>
         <script src="index.js"></script>
     </body>
 </html>
